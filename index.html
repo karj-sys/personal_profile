@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <!-- Metadata of the Webpage -->
+    <!-- Character-set Metadata -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- Viewport Metadata -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Description Metadata-->
+    <meta name="description" content="Portfolio Website" />
+    <!-- Author Metadata -->
+    <meta name="author" content="" />
+    <!-- Keyword Metadata -->
+    <meta
+      name="keywords"
+      content=""
+    />
+    <!-- Webpage Title -->
+    <title>Portfolio</title>
+
+    <!-- Import CSS: Main Stylesheet -->
+    <link rel="stylesheet" href="./assets/css/main.css" />
+  </head>
+
+  <body>
+    <button id="scrollTopBtn" title="Go to top">↑</button>
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.addEventListener("scroll", () => {
+    if (document.documentElement.scrollTop > 200) {
+      scrollBtn.style.opacity = "1";
+      scrollBtn.style.pointerEvents = "auto";
+    } else {
+      scrollBtn.style.opacity = "0";
+      scrollBtn.style.pointerEvents = "none";
+    }
+  });
+
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+  });
+</script>
+
+    <div id="particles-js">
+      <div class="header">
+        <h1>
+          <span class="site-title">Randel John's Portfolio</span>
+          <span class="site-description">Programmer • Web Developer</span>
+        </h1>
+        <div class="header-icons">
+          <a aria-label="My Github Profile" target="_blank" href="https://github.com/karj-sys">
+  <img src="./assets/img/jpg/gitlogo1.png" alt="GitHub Icon" class="social-icon">
+</a>
+<a aria-label="My Instagram Profile" target="_blank" href="https://www.instagram.com/_rjgnzls/">
+  <img src="./assets/img/jpg/iglogo1.png" alt="Instagram Icon" class="social-icon">
+</a>
+<a aria-label="My Facebook Profile" target="_blank" href="https://www.facebook.com/gcArjay/">
+  <img src="./assets/img/jpg/logofb1.png" alt="Facebook Icon" class="social-icon">
+</a>
+        </div>
+        <div class="header-links">
+          <a class="link" href="#about" data-scroll>About Me</a>
+          <a class="link" href="#projects" data-scroll>Projects</a>
+        </div>
+      </div>
+      <a class="down" href="#about" data-scroll>
+<img src="./assets/img/jpg/arrow1.png" alt="Scroll Down" class="icon" style="width: 30px; height: 30px;" />
+
+</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+      <!-- User Introduction-->
+      <div class="user-details">
+        <h3>About Me</h3>
+        <picture>
+          <source
+            type="image/webp"
+            srcset="./assets/img/jpg/picko.jpg"
+            alt="Professional Me"
+            width="20%"
+            style="border-radius: 50%"
+          />
+          <img
+            src="./assets/img/jpg/picko.jpg"
+            alt="Professional Me"
+            width="20%"
+            style="border-radius: 50%"
+          />
+        </picture>
+        <p>
+          I’m currently a third-year Computer Science student at Concepcion Holy Cross College Inc., 
+          with a strong focus on software development. My academic journey centers around building practical and scalable solutions, 
+          and I’ve developed proficiency in programming languages such as Java, PHP, JavaScript, and CSS. 
+          I’m passionate about applying my skills to real-world projects and continuously expanding my knowledge in 
+          areas like software engineering, data science, and machine learning. 
+          I’m actively seeking opportunities to grow in these fields and contribute meaningfully to innovative tech initiatives.
+        </p>
+      </div>
+      <script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        const el = entry.target;
+        if (entry.isIntersecting) {
+          el.classList.add("animate");
+        } else {
+          el.classList.remove("animate"); // Remove to allow repeat
+        }
+      });
+    },
+    { threshold: 0.3 } // Trigger when 30% of the element is visible
+  );
+
+  const userDetails = document.querySelector(".user-details");
+  observer.observe(userDetails);
+</script>
+      <!-- User Specifics -->
+      <div class="user">
+        <!-- Technology Stack #1: Languages -->
+        <div class="tech">
+          <h2>Languages</h2>
+          <img src="./assets/img/jpg/java1.png" alt="Java Icon" style="width:100px; height:100px;">
+         <img src="./assets/img/jpg/javascript1.png" alt="Java Icon" style="width:100px; height:100px;">
+         <img src="./assets/img/jpg/phplogo.svg" alt="Java Icon" style="width:100px; height:100px;">
+          <p>My favorite languages for systems programming.</p>
+        </div>
+
+        <!-- Technology Stack #2: Front-End -->
+        <div class="tech">
+          <h2>Front-End</h2>
+           <img src="./assets/img/jpg/htmllogo1.png" alt="Java Icon" style="width:100px; height:150px;">
+         <img src="./assets/img/jpg/csslogo.png" alt="Java Icon" style="width:100px; height:150px;">
+          <p>Technologies for front-end web development and component design.</p>
+        </div>
+
+        <!-- Technology Stack #4: Tools -->
+        <div class="tech">
+          <h2>Tools</h2>
+          <img src="./assets/img/jpg/githublogo1.png" alt="Java Icon" style="width:100px; height:70px;">
+          <img src="./assets/img/jpg/vscodelogo.svg" alt="Java Icon" style="width:100px; height:75px;">
+          <img src="./assets/img/jpg/sublime.png" alt="Java Icon" style="width:100px; height:90px;">
+          <p>My tools for project container and code editing.</p>
+        </div>
+      </div>
+    </section>
+    
+
+
+
+    <!-- Projects Section -->
+    <section id="projects">
+    <div class="user-projects"> 
+    <h2 style="text-align: center;">Previous Projects</h2>
+    <!-- Slideshow starts here -->
+    <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="./assets/img/jpg/school.png" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src ="./assets/img/jpg/pic1.png"class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="./assets/img/jpg/pic2.png" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="./assets/img/jpg/pic3.png" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="./assets/img/jpg/pic4.png" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="./assets/img/jpg/pic5.png" class="d-block w-100" alt="...">
+    </div>
+     <div class="carousel-item">
+      <img src="./assets/img/jpg/pic6.png" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+<script>
+  let slideIndex = 0;
+  function showSlides() {
+    const slides = document.getElementsByClassName("slide");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 4000); // Change image every 4 seconds
+  }
+
+  showSlides(); // Start the slideshow
+</script>
+</section>
+<section style="display: flex; justify-content: center; padding: 40px 20px;">
+  <div class="contents fade-slide" style="max-width: 800px; width: 100%; text-align: center;">
+    <h3 style="text-align: left;">School Website</h3>
+    <p style="text-align: justify;">
+      Our team designed and developed a dynamic personal website using HTML, CSS, JavaScript, 
+      Bootstrap, and PHP, hosted on GitHub Pages. The site serves as a digital portfolio that showcases our collaborative work 
+      in a visually engaging and interactive format. It features sections for my personal story, education, and projects, 
+      all structured with responsive design principles and clean UI components. This project reflects our shared commitment to 
+      technical excellence, creative presentation, and seamless user experience.
+    </p>
+  </div>
+</section>
+
+<style>
+  .fade-slide {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+
+  .fade-slide.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const target = document.querySelector('.fade-slide');
+
+    function handleScroll() {
+      const rect = target.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+
+      if (isVisible) {
+        target.classList.add('visible');
+      } else {
+        target.classList.remove('visible');
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // trigger on load
+  });
+</script>
+
+
+<br><br>
+
+<style>
+  .footer {
+    background: linear-gradient(to right, #111111, #000000);
+    color: white;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.2rem; /* Slightly bigger than default */
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .footer-text {
+    position: absolute;
+    white-space: nowrap;
+    left: -100%;
+  }
+</style>
+
+<footer class="footer">
+  <div class="footer-text" id="footerText">
+    &copy; 2025 RJ DEVS. ALL RIGHTS RESERVED.
+    2025 RJ DEVS. ALL RIGHTS RESERVED.
+    2025 RJ DEVS. ALL RIGHTS RESERVED.
+    2025 RJ DEVS. ALL RIGHTS RESERVED.
+    2025 RJ DEVS. ALL RIGHTS RESERVED.
+    2025 RJ DEVS. ALL RIGHTS RESERVED.
+    2025 RJ DEVS. ALL RIGHTS RESERVED.
+  </div>
+</footer>
+
+<script>
+  const text = document.getElementById("footerText");
+  let position = -text.offsetWidth;
+
+  function animate() {
+    position += 1;
+    if (position > window.innerWidth) {
+      position = -text.offsetWidth;
+    }
+    text.style.left = position + "px";
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+</script>
+
+
+
+    <!-- Import JS: Particles Theme -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- Import JS: Sweet Scroll -->
+    <script src="./assets/js/sweet-scroll.min.js"></script>
+    <!-- Import JS: Google Analytics -->
+    <script src="./assets/js/google-analytics.js"></script>
+    <!-- Import JS: Main Script -->
+    <script src="./assets/js/main.js"></script>
+  </body>
+</html>
